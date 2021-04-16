@@ -1,3 +1,4 @@
+import 'package:financa_pessoal/app/core/component/nome_logo.dart';
 import 'package:financa_pessoal/app/modules/shared/store/auth_store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -36,26 +37,7 @@ class SplashScreenPage extends StatelessWidget {
             SizedBox(
               height: 28.5,
             ),
-            Text(
-              "Minhas",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-                fontWeight: FontWeight.w300,
-                fontFamily: "Roboto",
-              ),
-              textAlign: TextAlign.center,
-            ),
-            Text(
-              "Finanças",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 36,
-                fontWeight: FontWeight.w500,
-                fontFamily: "Roboto",
-              ),
-              textAlign: TextAlign.center,
-            ),
+            NomeLogo(),
           ],
         ),
       ),
