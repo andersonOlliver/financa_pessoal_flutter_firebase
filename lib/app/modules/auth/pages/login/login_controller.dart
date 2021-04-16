@@ -1,4 +1,4 @@
-import 'package:financa_pessoal/app/const.dart';
+import 'package:financa_pessoal/app/core/util/const.dart';
 import 'package:financa_pessoal/app/modules/auth/model/login_email.dart';
 import 'package:financa_pessoal/app/modules/auth/services/auth_service_interface.dart';
 import 'package:financa_pessoal/app/modules/shared/model/user_model.dart';

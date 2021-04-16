@@ -1,5 +1,5 @@
 import 'package:asuka/asuka.dart';
-import 'package:financa_pessoal/app/const.dart';
+import 'package:financa_pessoal/app/core/util/const.dart';
 import 'package:financa_pessoal/app/modules/auth/pages/login/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
