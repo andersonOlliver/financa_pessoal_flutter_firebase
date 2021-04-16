@@ -1,4 +1,4 @@
-import 'package:financa_pessoal/app/const.dart';
+import 'package:financa_pessoal/app/core/util/const.dart';
 import 'package:financa_pessoal/app/modules/shared/store/auth_store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';

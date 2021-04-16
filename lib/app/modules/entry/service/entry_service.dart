@@ -19,7 +19,6 @@ class EntryService implements IEntryService {
   }
 
   Future add(NewEntry entry) async {
-    print(_store.currentUser.toJson());
     var entryWithUser = entry.copyWith(userId: _store.currentUser.userId!);
     return await _entries.add(entryWithUser.toJson());
   }
