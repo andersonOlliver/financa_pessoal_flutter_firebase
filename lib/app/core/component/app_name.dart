@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class NomeLogo extends StatelessWidget {
+class AppName extends StatelessWidget {
   final Color color;
 
-  const NomeLogo({Key? key, this.color = Colors.white}) : super(key: key);
+  const AppName({Key? key, this.color = Colors.white}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

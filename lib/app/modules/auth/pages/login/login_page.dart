@@ -1,4 +1,4 @@
-import 'package:financa_pessoal/app/core/component/nome_logo.dart';
+import 'package:financa_pessoal/app/core/component/app_name.dart';
 import 'package:financa_pessoal/app/core/util/const.dart';
 import 'package:financa_pessoal/app/core/util/theme.dart';
 import 'package:financa_pessoal/app/modules/auth/pages/login/login_controller.dart';
@@ -41,7 +41,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
-                    NomeLogo(
+                    AppName(
                       color: primaryColor,
                     ),
                     SocialLogin(),

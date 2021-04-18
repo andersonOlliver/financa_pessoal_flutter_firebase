@@ -1,4 +1,4 @@
-import 'package:financa_pessoal/app/core/component/nome_logo.dart';
+import 'package:financa_pessoal/app/core/component/app_name.dart';
 import 'package:financa_pessoal/app/modules/shared/store/auth_store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -37,7 +37,7 @@ class SplashScreenPage extends StatelessWidget {
             SizedBox(
               height: 28.5,
             ),
-            NomeLogo(),
+            AppName(),
           ],
         ),
       ),
