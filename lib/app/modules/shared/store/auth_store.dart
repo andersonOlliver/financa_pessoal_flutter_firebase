@@ -1,3 +1,4 @@
+import 'package:financa_pessoal/app/core/util/const.dart';
 import 'package:financa_pessoal/app/modules/auth/services/auth_service.dart';
 import 'package:financa_pessoal/app/modules/shared/model/user_model.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -24,13 +25,13 @@ abstract class _AuthStoreBase with Store {
     // var auth = Modular.get<IFirebaseAuthService>();
     await _authService.logout();
     this.setUser(UserModel.empty());
-    Modular.to.pushReplacementNamed(Modular.initialRoute);
+    Modular.to.pushReplacementNamed(Routes.login);
   }
 
   Future<bool> checkLogin() async {
     return _authService
         .currentUser()
         .then((UserModel? user) => setUser(user ?? UserModel.empty()))
-        .then((value) => currentUser.isEmpty);
+        .then((value) => currentUser.isNotEmpty);
   }
 }

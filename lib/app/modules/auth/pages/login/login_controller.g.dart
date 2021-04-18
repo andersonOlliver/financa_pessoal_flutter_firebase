@@ -57,6 +57,37 @@ mixin _$LoginController on _LoginControllerBase, Store {
     });
   }
 
+  final _$isClickedAtom = Atom(name: '_LoginControllerBase.isClicked');
+
+  @override
+  bool get isClicked {
+    _$isClickedAtom.reportRead();
+    return super.isClicked;
+  }
+
+  @override
+  set isClicked(bool value) {
+    _$isClickedAtom.reportWrite(value, super.isClicked, () {
+      super.isClicked = value;
+    });
+  }
+
+  final _$invalidCredentialsAtom =
+      Atom(name: '_LoginControllerBase.invalidCredentials');
+
+  @override
+  bool get invalidCredentials {
+    _$invalidCredentialsAtom.reportRead();
+    return super.invalidCredentials;
+  }
+
+  @override
+  set invalidCredentials(bool value) {
+    _$invalidCredentialsAtom.reportWrite(value, super.invalidCredentials, () {
+      super.invalidCredentials = value;
+    });
+  }
+
   final _$loginAsyncAction = AsyncAction('_LoginControllerBase.login');
 
   @override
@@ -90,10 +121,23 @@ mixin _$LoginController on _LoginControllerBase, Store {
   }
 
   @override
+  dynamic invalidate() {
+    final _$actionInfo = _$_LoginControllerBaseActionController.startAction(
+        name: '_LoginControllerBase.invalidate');
+    try {
+      return super.invalidate();
+    } finally {
+      _$_LoginControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 email: ${email},
 password: ${password},
+isClicked: ${isClicked},
+invalidCredentials: ${invalidCredentials},
 credential: ${credential}
     ''';
   }

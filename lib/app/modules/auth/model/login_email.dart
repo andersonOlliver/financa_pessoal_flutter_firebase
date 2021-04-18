@@ -4,6 +4,8 @@ class LoginEmail {
 
   LoginEmail({required this.email, required this.password});
 
+  bool get isValid => email.isNotEmpty && password.isNotEmpty;
+
   factory LoginEmail.fromEmailAndPassword(String email, String password) =>
       LoginEmail(email: email, password: password);
 

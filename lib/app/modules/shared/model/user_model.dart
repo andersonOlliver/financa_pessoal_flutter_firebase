@@ -17,6 +17,7 @@ class UserModel {
       );
 
   bool get isEmpty => email.isEmpty;
+  bool get isNotEmpty => !isEmpty;
 
   toJson() => {'username': username, 'email': email, 'userId': userId};
 

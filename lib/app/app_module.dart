@@ -21,7 +21,7 @@ class AppModule extends Module {
   @override
   final List<ModularRoute> routes = [
     ChildRoute(Modular.initialRoute, child: (_, __) => SplashScreenPage()),
-    ModuleRoute(Routes.login, module: AuthModule()),
+    ModuleRoute(Routes.auth, module: AuthModule()),
     ModuleRoute(Routes.entries, module: EntryModule()),
     ModuleRoute(Routes.categories, module: CategoryModule()),
   ];
