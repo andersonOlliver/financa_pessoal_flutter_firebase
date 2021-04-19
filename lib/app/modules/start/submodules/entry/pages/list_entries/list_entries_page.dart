@@ -1,9 +1,10 @@
-import 'package:financa_pessoal/app/modules/entry/model/entry_model.dart';
-import 'package:financa_pessoal/app/modules/entry/pages/list_entries/list_entries_controller.dart';
 import 'package:financa_pessoal/app/modules/shared/widget/side_menu.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/model/entry_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import 'list_entries_controller.dart';
 
 class ListEntriesPage extends StatefulWidget {
   final String title;

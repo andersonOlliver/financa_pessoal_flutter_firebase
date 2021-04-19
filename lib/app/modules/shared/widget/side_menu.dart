@@ -9,48 +9,49 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     var store = Modular.get<AuthStore>();
 
-    return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          Observer(
-            builder: (_) => UserAccountsDrawerHeader(
-              accountName: Text(store.currentUser.username ?? 'Usuário'),
-              accountEmail: Text(store.currentUser.email),
-              currentAccountPicture: CircleAvatar(
-                backgroundColor:
-                    Theme.of(context).platform == TargetPlatform.iOS
-                        ? Colors.blue
-                        : Colors.white,
-                child: Text(
-                  store.currentUser.username?.substring(0, 1).toUpperCase() ??
-                      store.currentUser.email.substring(0, 1).toUpperCase(),
-                  style: TextStyle(fontSize: 40),
-                ),
-              ),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
+    return ListView(
+      padding: EdgeInsets.zero,
+      children: [
+        Observer(
+          builder: (_) => UserAccountsDrawerHeader(
+            accountName: Text(store.currentUser.username ?? 'Usuário'),
+            accountEmail: Text(store.currentUser.email),
+            // currentAccountPicture: CircleAvatar(
+            //   backgroundColor: Theme.of(context).platform == TargetPlatform.iOS
+            //       ? Colors.blue
+            //       : Colors.white,
+            //   child: Text(
+            //     store.currentUser.username?.substring(0, 1).toUpperCase() ??
+            //         store.currentUser.email.substring(0, 1).toUpperCase(),
+            //     style: TextStyle(fontSize: 40),
+            //   ),
+            // ),
+            decoration: BoxDecoration(
+              color: Colors.blue,
             ),
           ),
-          Observer(builder: (_) {
-            return ListTile(
-              title: Text('Categorias'),
-              onTap: () async {
-                Modular.to.pushNamed(Routes.categories);
-              },
-            );
-          }),
-          Observer(builder: (_) {
-            return ListTile(
-              title: Text('Sair'),
-              onTap: () async {
-                await store.logout();
-              },
-            );
-          }),
-        ],
-      ),
+        ),
+        Observer(builder: (_) {
+          return ListTile(
+            title: Text('Categorias'),
+            onTap: () async {
+              Modular.to.pushNamed(Routes.categories);
+            },
+          );
+        }),
+        ListTile(
+          title: Text('Cartões'),
+          onTap: null,
+        ),
+        Observer(builder: (_) {
+          return ListTile(
+            title: Text('Sair'),
+            onTap: () async {
+              await store.logout();
+            },
+          );
+        }),
+      ],
     );
   }
 }

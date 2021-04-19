@@ -44,7 +44,7 @@ ThemeData theme() {
     accentColor: Color(0xff1f9eec),
     elevatedButtonTheme: ElevatedButtonThemeData(style: raisedButtonStyle2),
     textButtonTheme: TextButtonThemeData(style: flatButtonStyle),
-    backgroundColor: const Color(0xFFFFFFFF),
+    backgroundColor: Colors.white,
     scaffoldBackgroundColor: Colors.white,
     // buttonTheme: ButtonThemeData(
     //   colorScheme: colorScheme,

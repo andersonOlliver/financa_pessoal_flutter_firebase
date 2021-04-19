@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:financa_pessoal/app/modules/entry/model/entry_model.dart';
-import 'package:financa_pessoal/app/modules/entry/model/new_entry_dto.dart';
 import 'package:financa_pessoal/app/modules/shared/store/auth_store.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/model/entry_model.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/model/new_entry_dto.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'entry_service_interface.dart';

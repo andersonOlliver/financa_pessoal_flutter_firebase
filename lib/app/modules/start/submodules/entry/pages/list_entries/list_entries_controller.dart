@@ -1,5 +1,5 @@
-import 'package:financa_pessoal/app/modules/entry/model/entry_model.dart';
-import 'package:financa_pessoal/app/modules/entry/service/entry_service_interface.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/model/entry_model.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/service/entry_service_interface.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 

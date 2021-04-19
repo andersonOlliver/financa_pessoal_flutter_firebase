@@ -1,5 +1,6 @@
 class Routes {
   static String home = '/home';
+  static String start = '/start';
   static String auth = '/auth';
   static String loginInternal = '/login';
   static String login = auth + loginInternal;

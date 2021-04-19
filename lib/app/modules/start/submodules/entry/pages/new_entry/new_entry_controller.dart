@@ -1,6 +1,6 @@
 import 'package:asuka/snackbars/asuka_snack_bar.dart';
-import 'package:financa_pessoal/app/modules/entry/model/new_entry_dto.dart';
-import 'package:financa_pessoal/app/modules/entry/service/entry_service_interface.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/model/new_entry_dto.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/service/entry_service_interface.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';

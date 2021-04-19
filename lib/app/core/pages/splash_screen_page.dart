@@ -11,7 +11,7 @@ class SplashScreenPage extends StatelessWidget {
       return Future.delayed(
         Duration(seconds: 5),
         () {
-          var route = v ? Routes.entries : Routes.login;
+          var route = v ? Routes.start : Routes.login;
           return Modular.to.pushReplacementNamed(route);
           // Modular.to.pushNamedAndRemoveUntil(route, (_) => false);
         },

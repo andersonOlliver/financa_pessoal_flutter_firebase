@@ -421,7 +421,7 @@ packages:
       name: mobx
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0-nullsafety.3"
+    version: "2.0.0"
   mobx_codegen:
     dependency: "direct dev"
     description:
@@ -429,6 +429,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0-nullsafety.2"
+  mobx_triple:
+    dependency: "direct main"
+    description:
+      name: mobx_triple
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   modular_codegen:
     dependency: "direct dev"
     description:

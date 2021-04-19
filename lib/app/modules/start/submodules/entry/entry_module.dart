@@ -1,4 +1,4 @@
-import 'package:financa_pessoal/app/modules/entry/service/entry_service.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/service/entry_service.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'pages/list_entries/list_entries_controller.dart';

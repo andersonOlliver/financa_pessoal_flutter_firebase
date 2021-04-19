@@ -1,5 +1,4 @@
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
-import 'package:financa_pessoal/app/modules/entry/pages/list_entries/list_entries_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
