@@ -103,9 +103,11 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                         builder: (_) {
                           return ElevatedButton(
                               onPressed: _loginSubmit,
-                              child: controller.invalidCredentials
-                                  ? Text('Tentar novamente')
-                                  : Text('Entre'));
+                              child: controller.isClicked
+                                  ? CircularProgressIndicator()
+                                  : controller.invalidCredentials
+                                      ? Text('Tentar novamente')
+                                      : Text('Entre'));
                         },
                       ),
                     ),

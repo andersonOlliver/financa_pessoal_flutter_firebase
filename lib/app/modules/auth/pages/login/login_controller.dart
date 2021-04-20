@@ -43,6 +43,7 @@ abstract class _LoginControllerBase with Store {
   @action
   login() async {
     print('Login');
+    isClicked = true;
     if (credential.isValid) {
 // loading.show();
       await Future.delayed(Duration(seconds: 1));
@@ -50,13 +51,12 @@ abstract class _LoginControllerBase with Store {
         print(user);
         _authStore.setUser(user);
         // await loading.hide();
-        Modular.to.pushReplacementNamed(Routes.entries);
+        Modular.to.pushReplacementNamed(Routes.start);
       }).catchError((failure) {
         print(failure);
         this.invalidate();
         asuka.showSnackBar(SnackBar(content: Text(failure.message)));
-      });
-      // .whenComplete(() => loading.hide());
+      }).whenComplete(() => isClicked = false);
     }
   }
 

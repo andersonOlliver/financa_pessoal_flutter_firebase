@@ -5,6 +5,7 @@ import 'pages/list_entries/list_entries_controller.dart';
 import 'pages/list_entries/list_entries_page.dart';
 import 'pages/new_entry/new_entry_controller.dart';
 import 'pages/new_entry/new_entry_page.dart';
+import 'pages/new_fuel/new_fuel_page.dart';
 
 class EntryModule extends Module {
   @override
@@ -17,6 +18,7 @@ class EntryModule extends Module {
   @override
   final List<ModularRoute> routes = [
     ChildRoute('', child: (_, args) => ListEntriesPage()),
-    ChildRoute('new-entry', child: (_, args) => NewEntryPage())
+    ChildRoute('new-entry', child: (_, args) => NewEntryPage()),
+    ChildRoute('new-fuel', child: (_, args) => NewFuelPage())
   ];
 }

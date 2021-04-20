@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 
 const Color primaryColor = Color(0xff4c47b5);
 final Color secondaryColor = Color(0xff1f9eec);
+final Color backgroundSecondaryColor = Color(0xff2196F3); // Color(0xff2196F3);
 final ColorScheme colorScheme = const ColorScheme.light().copyWith(
   primary: primaryColor,
   secondary: secondaryColor,
 );
+
+final TextStyle whiteText = TextStyle(
+  color: Colors.white,
+);
+
+final TextStyle whiteBigText = whiteText.copyWith(fontSize: 20);
 
 final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
   onPrimary: Colors.black,

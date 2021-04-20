@@ -70,6 +70,10 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                 ActionButton(
                   svgIcon: 'assets/images/gas-station.svg',
                   label: 'Abastecer',
+                  onTap: () {
+                    Modular.to
+                        .pushNamed('/start/entries/new-fuel', forRoot: false);
+                  },
                 ),
                 ActionButton(
                   svgIcon: 'assets/images/down-arrow-blue.svg',

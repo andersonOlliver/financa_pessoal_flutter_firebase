@@ -1,1 +1,1 @@
-enum EntryType { Receita, Despesa }
+enum EntryType { INCOME, EXPENSE }
