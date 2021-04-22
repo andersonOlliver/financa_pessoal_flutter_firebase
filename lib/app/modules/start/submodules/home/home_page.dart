@@ -1,3 +1,4 @@
+import 'package:financa_pessoal/app/core/util/theme.dart';
 import 'package:financa_pessoal/app/modules/shared/component/action_button.dart';
 import 'package:financa_pessoal/app/modules/shared/component/balance_iten.dart';
 import 'package:financa_pessoal/app/modules/shared/component/spending_status_bar.dart';
@@ -18,10 +19,6 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //     // title: Text('Counter'),
-
-      //     ),
       body: Column(
         children: [
           Container(
@@ -72,7 +69,7 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                   label: 'Abastecer',
                   onTap: () {
                     Modular.to
-                        .pushNamed('/start/entries/new-fuel', forRoot: false);
+                        .pushNamed('/start/entries/new-fuel', forRoot: true);
                   },
                 ),
                 ActionButton(
@@ -82,7 +79,90 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
               ],
             ),
           ),
-          SpendingStatusBar()
+          SpendingStatusBar(),
+          SizedBox(height: 20),
+          Container(
+            decoration: BoxDecoration(color: Color(0x2bc4c4c4)),
+            // height: 50,
+            padding: EdgeInsets.all(8),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Ultimos lançamentos',
+                      style: TextStyle(
+                        color: primaryColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Ver todos',
+                      style: TextStyle(
+                        color: primaryColor,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+                Card(
+                  child: ListView(
+                    shrinkWrap: true,
+                    children: [
+                      ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.grey[200],
+                          child: Icon(
+                            Icons.credit_card,
+                            color: primaryColor,
+                          ),
+                        ),
+                        title: Text('Almoço'),
+                        subtitle: Text(
+                          '13 Agosto',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        trailing: Text(
+                          'R\$ 30,00',
+                          style: TextStyle(
+                            color: Colors.redAccent,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.grey[200],
+                          child: Icon(
+                            Icons.credit_card,
+                            color: primaryColor,
+                          ),
+                        ),
+                        title: Text('Almoço'),
+                        subtitle: Text(
+                          '13 Agosto',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        trailing: Text(
+                          'R\$ 30,00',
+                          style: TextStyle(
+                            color: Colors.redAccent,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

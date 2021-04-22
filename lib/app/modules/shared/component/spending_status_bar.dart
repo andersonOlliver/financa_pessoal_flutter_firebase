@@ -61,12 +61,8 @@ class SpendingStatusBar extends StatelessWidget {
                   right: 103,
                 ),
                 decoration: BoxDecoration(
-                  color: Color(
-                    0x2bc4c4c4,
-                  ),
-                  borderRadius: BorderRadius.circular(
-                    5,
-                  ),
+                  color: Color(0x2bc4c4c4),
+                  borderRadius: BorderRadius.circular(5),
                 ),
               ),
             ),
