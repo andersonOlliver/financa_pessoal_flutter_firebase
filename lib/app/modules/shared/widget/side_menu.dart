@@ -43,6 +43,10 @@ class SideMenu extends StatelessWidget {
           title: Text('Cartões'),
           onTap: null,
         ),
+        ListTile(
+          title: Text('Contas'),
+          onTap: null,
+        ),
         Observer(builder: (_) {
           return ListTile(
             title: Text('Sair'),

@@ -1,5 +1,5 @@
-import 'package:financa_pessoal/app/modules/start/submodules/entry/model/entry_model.dart';
-import 'package:financa_pessoal/app/modules/start/submodules/entry/model/new_entry_dto.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/entities/dto/new_entry_dto.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/entities/entry_model.dart';
 
 abstract class IEntryService {
   Future add(NewEntry entry);

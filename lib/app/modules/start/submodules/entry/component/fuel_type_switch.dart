@@ -1,4 +1,5 @@
 import 'package:financa_pessoal/app/core/util/theme.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/entities/enum/fuel_type_enum.dart';
 import 'package:flutter/material.dart';
 
 class FuelTypeSwitch extends StatefulWidget {
@@ -78,7 +79,5 @@ class _FuelTypeSwitchState extends State<FuelTypeSwitch> {
     });
   }
 }
-
-enum FuelType { ALCOOL, GASOLINA }
 
 typedef OnChangeFuelType = void Function(FuelType type);

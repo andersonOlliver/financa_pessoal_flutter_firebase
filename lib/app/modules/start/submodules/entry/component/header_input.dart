@@ -1,19 +1,34 @@
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:financa_pessoal/app/core/util/theme.dart';
-import 'package:financa_pessoal/app/modules/start/submodules/entry/model/entry_type_enum.dart';
+import 'package:financa_pessoal/app/modules/start/submodules/entry/entities/enum/entry_type_enum.dart';
 import 'package:flutter/material.dart';
 
-class HeaderInput extends StatelessWidget {
-  final EntryType type;
+typedef OnChange = void Function(String value);
 
-  const HeaderInput({Key? key, required this.type}) : super(key: key);
+class HeaderInput extends StatefulWidget {
+  final EntryType type;
+  final OnChange onChange;
+  final bool hasAutoFocus;
+
+  const HeaderInput({
+    Key? key,
+    required this.type,
+    required this.onChange,
+    required this.hasAutoFocus,
+  }) : super(key: key);
+
+  @override
+  _HeaderInputState createState() => _HeaderInputState();
+}
+
+class _HeaderInputState extends State<HeaderInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 85,
       width: double.infinity,
       decoration: BoxDecoration(
-          color: type == EntryType.EXPENSE
+          color: widget.type == EntryType.EXPENSE
               ? backgroundSecondaryColor
               : primaryColor),
       padding: EdgeInsets.symmetric(horizontal: 20),
@@ -31,12 +46,10 @@ class HeaderInput extends StatelessWidget {
             width: MediaQuery.of(context).size.width / 2,
             child: TextFormField(
               textAlign: TextAlign.end,
+              textInputAction: TextInputAction.next,
               cursorColor: Colors.white,
-              autofocus: true,
-              onChanged: (value) {
-                print(value);
-                // controller.setValue(value);
-              },
+              autofocus: this.widget.hasAutoFocus,
+              onChanged: this.widget.onChange,
               inputFormatters: [
                 CurrencyTextInputFormatter(
                   locale: 'ptBr',

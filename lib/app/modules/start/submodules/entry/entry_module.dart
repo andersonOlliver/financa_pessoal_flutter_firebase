@@ -1,3 +1,4 @@
+import 'package:financa_pessoal/app/modules/start/submodules/entry/pages/new_fuel/new_fuel_controller.dart';
 import 'package:financa_pessoal/app/modules/start/submodules/entry/service/entry_service.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -13,6 +14,7 @@ class EntryModule extends Module {
     $EntryService,
     $EntryController,
     $NewEntryController,
+    $NewFuelController,
   ];
 
   @override

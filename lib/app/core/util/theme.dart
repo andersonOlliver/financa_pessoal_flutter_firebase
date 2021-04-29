@@ -47,15 +47,26 @@ final ButtonStyle flatButtonStyle = TextButton.styleFrom(
 
 ThemeData theme() {
   return ThemeData(
-    primaryColor: primaryColor,
-    accentColor: Color(0xff1f9eec),
-    elevatedButtonTheme: ElevatedButtonThemeData(style: raisedButtonStyle2),
-    textButtonTheme: TextButtonThemeData(style: flatButtonStyle),
-    backgroundColor: Colors.white,
-    scaffoldBackgroundColor: Colors.white,
-    // buttonTheme: ButtonThemeData(
-    //   colorScheme: colorScheme,
-    //   textTheme: ButtonTextTheme.primary,
-    // ),
-  );
+      primaryColor: primaryColor,
+      accentColor: Color(0xff1f9eec),
+      elevatedButtonTheme: ElevatedButtonThemeData(style: raisedButtonStyle2),
+      textButtonTheme: TextButtonThemeData(style: flatButtonStyle),
+      backgroundColor: Colors.white,
+      scaffoldBackgroundColor: Colors.white,
+      appBarTheme: AppBarTheme(
+        iconTheme: IconThemeData(color: primaryColor),
+        titleTextStyle: TextStyle(color: primaryColor),
+        elevation: 0,
+        backgroundColor: Colors.white,
+      ),
+      primaryTextTheme: TextTheme(
+          headline6: TextStyle(
+        color: primaryColor,
+        fontWeight: FontWeight.w400,
+      ))
+      // buttonTheme: ButtonThemeData(
+      //   colorScheme: colorScheme,
+      //   textTheme: ButtonTextTheme.primary,
+      // ),
+      );
 }
