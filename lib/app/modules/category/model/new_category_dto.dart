@@ -1,6 +1,6 @@
 class NewCategory {
   final String title;
-  final String color;
+  final int color;
   late String? userId;
   late DateTime createdAt;
 
@@ -12,7 +12,7 @@ class NewCategory {
 
   factory NewCategory.create({
     required String title,
-    required String color,
+    required int color,
   }) =>
       NewCategory(
         title: title,
@@ -23,7 +23,7 @@ class NewCategory {
   NewCategory copyWith({
     required String userId,
     String? title,
-    String? color,
+    int? color,
   }) =>
       NewCategory(
           title: title ?? this.title,

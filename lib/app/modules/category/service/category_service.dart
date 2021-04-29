@@ -27,6 +27,7 @@ class CategoryService implements ICategoryService {
   Stream<List<Category>> list() {
     return _categories
         .where('userId', isEqualTo: _store.currentUser.userId)
+        .orderBy('createdAt')
         .snapshots()
         .map((value) => value.docs
             .map((document) => Category.fromDocument(document))

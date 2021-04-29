@@ -53,16 +53,6 @@ class CategorySelect extends StatelessWidget {
       barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
       barrierColor: Colors.black.withOpacity(0.5),
       transitionDuration: Duration(milliseconds: 500),
-      // transitionBuilder: (context, animation, secondaryAnimation, child) {
-      //   return ScaleTransition(
-      //     alignment: Alignment.bottomCenter,
-      //     scale: animation,
-      //     child: Opacity(
-      //       opacity: animation.value,
-      //       child: child,
-      //     ),
-      //   );
-      // },
       transitionBuilder: (context, animation, secondaryAnimation, child) {
         var fadeTween = CurveTween(curve: Curves.fastOutSlowIn);
         var fadeAnimation = fadeTween.animate(animation);
